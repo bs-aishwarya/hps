@@ -26,6 +26,7 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0.0"
+        multiDexEnabled = true
     }
 
     buildTypes {
@@ -44,7 +45,9 @@ flutter {
 dependencies {
     implementation(platform("com.google.firebase:firebase-bom:33.10.0"))
     implementation("com.google.firebase:firebase-analytics")
-    implementation("com.google.firebase:firebase-auth") // Add Firebase Auth if needed
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.android.gms:play-services-maps:19.1.0")
+    implementation("com.google.android.gms:play-services-location:21.3.0")
     configurations.all {
         resolutionStrategy.eachDependency {
             if (requested.group == "org.jetbrains.kotlin") {

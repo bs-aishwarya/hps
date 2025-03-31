@@ -13,6 +13,9 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
+        maven {
+            url = uri("${flutterSdkPath}/bin/cache/artifacts/engine/android")
+        }
     }
 }
 
